@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: blog-provider
+  datasource:
+    url: jdbc:mysql://localhost:3306/indivblog
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+
+
