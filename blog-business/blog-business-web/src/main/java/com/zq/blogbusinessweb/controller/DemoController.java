@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @RequestMapping(value = "test",method = RequestMethod.POST)
     public String test(@PathVariable("name") String name){
-        return "";
+        return "1";
     }
 }
