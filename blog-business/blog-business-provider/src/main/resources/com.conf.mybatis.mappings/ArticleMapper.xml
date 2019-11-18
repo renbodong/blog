@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zq.blogbusinessprovider.dao.ArticleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="ArticleResultMap" type="com.zq.blogbusinessapi.pojo.Article">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="create_time" property="createTime" />
+        <result column="create_user" property="createUser" />
+    </resultMap>
+
+    <select id="queryArticleLists" resultMap="ArticleResultMap">
+        select * from article a
+        <where>
+            a.create_user = #{articleVo.createUser}
+        </where>
+    </select>
+
+</mapper>

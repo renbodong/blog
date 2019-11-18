@@ -1,0 +1,38 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: blog-web
+  datasource:
+    url: jdbc:mysql://localhost:3306/indiv_blog?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+dubbo:
+  application:
+    name: blog-web
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://localhost:2181
+    timeout: 5000
+
+demo:
+  service:
+    version1: 1.0.0
+
+
+
+
+
+
+
+
+
+
+
